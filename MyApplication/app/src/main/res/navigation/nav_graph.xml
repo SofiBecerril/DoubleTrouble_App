@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainMenuFragment" >
+
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.example.myapplication.MainMenuFragment"
+        android:label="Menú Principal" >
+
+        <action
+            android:id="@+id/action_mainMenuFragment_to_perfilFragment1"
+            app:destination="@id/perfilFragment1" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_perfilFragment2"
+            app:destination="@id/perfilFragment2" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/perfilFragment1"
+        android:name="com.example.myapplication.PerfilFragment1"
+        android:label="Perfil Integrante 1" >
+
+        <action
+            android:id="@+id/action_perfilFragment1_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/perfilFragment2"
+        android:name="com.example.myapplication.PerfilFragment2"
+        android:label="Perfil Integrante 2" >
+
+        <action
+            android:id="@+id/action_perfilFragment2_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+
+    </fragment>
+
+</navigation>

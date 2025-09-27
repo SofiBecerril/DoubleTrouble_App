@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BA04567C"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".PerfilFragment2"
+    tools:layout_editor_absoluteX="10dp"
+    tools:layout_editor_absoluteY="10dp">
+
+    <TextView
+        android:id="@+id/name02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="35dp"
+        android:text="Sofía Becerril Pérez"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/image02"
+        android:layout_width="235dp"
+        android:layout_height="205dp"
+        android:src="@drawable/whale" />
+
+    <TextView
+        android:id="@+id/description02"
+        android:layout_width="325dp"
+        android:layout_height="273dp"
+        android:layout_marginTop="20dp"
+        android:background="#00FFB703"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingTop="20dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="20dp"
+        android:text="Soy estudiante de Ingeniería en Cibernética y Sistemas Computacionales, con interés en Inteligencia Artificial, Análisis de Datos y Bases de Datos. Aunque todavía no he definido mi especialización, estoy abierta a explorar distintas áreas tecnológicas. En mi tiempo libre disfruto de escuchar música, ver programas de cocina y nadar."
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/backHome02"
+        android:layout_width="307dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#E0DEDE"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Regresar"
+        android:textAlignment="center"
+        android:textColor="#141313"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="16dp" />
+
+</LinearLayout>

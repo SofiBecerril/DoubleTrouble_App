@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BA04567C"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".PerfilFragment1"
+    tools:layout_editor_absoluteX="10dp"
+    tools:layout_editor_absoluteY="10dp">
+
+    <TextView
+        android:id="@+id/name01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="35dp"
+        android:text="Elizabeth Becerril Pérez"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/image01"
+        android:layout_width="235dp"
+        android:layout_height="205dp"
+        android:src="@drawable/crab" />
+
+    <TextView
+        android:id="@+id/description01"
+        android:layout_width="325dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:background="#00FFB703"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingTop="20dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="20dp"
+        android:text="Soy Estudiante de Ingeniería en Sistemas Computacionales y Cibernética, con interés en análisis de datos, optimización de procesos y ciberseguridad. Estoy enfocada en aprender continuamente y aplicar otros conocimientos (como finanzas o administración) para resolver problemas de manera eficiente."
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/backHome01"
+        android:layout_width="316dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#E0DEDE"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Regresar"
+        android:textAlignment="center"
+        android:textColor="#141313"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="16dp" />
+
+</LinearLayout>
