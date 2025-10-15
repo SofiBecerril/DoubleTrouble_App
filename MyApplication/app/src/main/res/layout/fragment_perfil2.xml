@@ -1,65 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BA04567C"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".PerfilFragment2"
-    tools:layout_editor_absoluteX="10dp"
-    tools:layout_editor_absoluteY="10dp">
+    android:background="@drawable/bg_pixel_profile"
+    android:padding="20dp"
+    tools:context=".PerfilFragment2">
 
-    <TextView
-        android:id="@+id/name02"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-smallcaps"
-        android:gravity="center"
-        android:paddingTop="20dp"
-        android:paddingBottom="35dp"
-        android:text="Sofía Becerril Pérez"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/image02"
-        android:layout_width="235dp"
-        android:layout_height="205dp"
-        android:src="@drawable/whale" />
+        <ImageView
+            android:id="@+id/starPerfilRight"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/menu_star_decoration"
+            android:src="@drawable/pixel_star"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/description02"
-        android:layout_width="325dp"
-        android:layout_height="273dp"
-        android:layout_marginTop="20dp"
-        android:background="#00FFB703"
-        android:fontFamily="sans-serif-condensed"
-        android:gravity="center"
-        android:paddingLeft="30dp"
-        android:paddingTop="20dp"
-        android:paddingRight="30dp"
-        android:paddingBottom="20dp"
-        android:text="Soy estudiante de Ingeniería en Cibernética y Sistemas Computacionales, con interés en Inteligencia Artificial, Análisis de Datos y Bases de Datos. Aunque todavía no he definido mi especialización, estoy abierta a explorar distintas áreas tecnológicas. En mi tiempo libre disfruto de escuchar música, ver programas de cocina y nadar."
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/name02"
+            style="@style/TextAppearance.Pixel.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:text="Sofía Becerril Pérez"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/starPerfilRight" />
 
-    <Button
-        android:id="@+id/backHome02"
-        android:layout_width="307dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#E0DEDE"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Regresar"
-        android:textAlignment="center"
-        android:textColor="#141313"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:cornerRadius="16dp" />
+        <FrameLayout
+            android:id="@+id/portraitFrame02"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:background="@drawable/pixel_panel"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name02">
 
-</LinearLayout>
+            <ImageView
+                android:id="@+id/image02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/profile_sofia_avatar"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pixel_avatar_sofia" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/pixelDividerTop02"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/pixel_salmon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/portraitFrame02" />
+
+        <LinearLayout
+            android:id="@+id/profileChips02"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pixelDividerTop02">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pixel_chip"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:text="IA"
+                android:textAllCaps="true"
+                android:textColor="@color/pixel_shadow"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pixel_chip"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:text="Bases de datos"
+                android:textAllCaps="true"
+                android:textColor="@color/pixel_shadow"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/statsTitle02"
+            style="@style/TextAppearance.Pixel.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:paddingVertical="8dp"
+            android:text="@string/profile_stats_title"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileChips02" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/statsGrid02"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="3"
+            android:layout_marginTop="12dp"
+            android:useDefaultMargins="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statsTitle02">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/pixel_badge_frame"
+                android:gravity="center"
+                android:minWidth="96dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                app:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="@string/profile_stat_music"
+                    android:src="@drawable/pixel_icon_music" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:text="@string/profile_stat_music"
+                    android:textColor="@color/pixel_glow"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/pixel_badge_frame"
+                android:gravity="center"
+                android:minWidth="96dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                app:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="@string/profile_stat_data"
+                    android:src="@drawable/pixel_icon_data" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:text="@string/profile_stat_data"
+                    android:textColor="@color/pixel_glow"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/pixel_badge_frame"
+                android:gravity="center"
+                android:minWidth="96dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                app:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="@string/profile_stat_swim"
+                    android:src="@drawable/pixel_icon_swim" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:text="@string/profile_stat_swim"
+                    android:textColor="@color/pixel_glow"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.gridlayout.widget.GridLayout>
+
+        <TextView
+            android:id="@+id/description02"
+            style="@style/TextAppearance.Pixel.Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/pixel_panel"
+            android:padding="24dp"
+            android:text="Soy estudiante de Ingeniería en Cibernética y Sistemas Computacionales, con interés en Inteligencia Artificial, Análisis de Datos y Bases de Datos. Aunque todavía no he definido mi especialización, estoy abierta a explorar distintas áreas tecnológicas. En mi tiempo libre disfruto de escuchar música, ver programas de cocina y nadar."
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statsGrid02" />
+
+        <Button
+            android:id="@+id/backHome02"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/pixel_button_selector"
+            android:padding="16dp"
+            android:text="Regresar"
+            android:textAllCaps="true"
+            android:textColor="@color/pixel_glow"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description02" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

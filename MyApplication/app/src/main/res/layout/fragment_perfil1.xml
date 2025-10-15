@@ -1,65 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BA04567C"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".PerfilFragment1"
-    tools:layout_editor_absoluteX="10dp"
-    tools:layout_editor_absoluteY="10dp">
+    android:background="@drawable/bg_pixel_profile"
+    android:padding="20dp"
+    tools:context=".PerfilFragment1">
 
-    <TextView
-        android:id="@+id/name01"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-smallcaps"
-        android:gravity="center"
-        android:paddingTop="20dp"
-        android:paddingBottom="35dp"
-        android:text="Elizabeth Becerril Pérez"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/image01"
-        android:layout_width="235dp"
-        android:layout_height="205dp"
-        android:src="@drawable/crab" />
+        <ImageView
+            android:id="@+id/starPerfilLeft"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/menu_star_decoration"
+            android:src="@drawable/pixel_star"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/description01"
-        android:layout_width="325dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="20dp"
-        android:background="#00FFB703"
-        android:fontFamily="sans-serif-condensed"
-        android:gravity="center"
-        android:paddingLeft="30dp"
-        android:paddingTop="20dp"
-        android:paddingRight="30dp"
-        android:paddingBottom="20dp"
-        android:text="Soy Estudiante de Ingeniería en Sistemas Computacionales y Cibernética, con interés en análisis de datos, optimización de procesos y ciberseguridad. Estoy enfocada en aprender continuamente y aplicar otros conocimientos (como finanzas o administración) para resolver problemas de manera eficiente."
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/name01"
+            style="@style/TextAppearance.Pixel.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:text="Elizabeth Becerril Pérez"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/starPerfilLeft" />
 
-    <Button
-        android:id="@+id/backHome01"
-        android:layout_width="316dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#E0DEDE"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Regresar"
-        android:textAlignment="center"
-        android:textColor="#141313"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:cornerRadius="16dp" />
+        <FrameLayout
+            android:id="@+id/portraitFrame01"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:background="@drawable/pixel_panel"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name01">
 
-</LinearLayout>
+            <ImageView
+                android:id="@+id/image01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/profile_elizabeth_avatar"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pixel_avatar_elizabeth" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/pixelDividerTop01"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/pixel_salmon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/portraitFrame01" />
+
+        <LinearLayout
+            android:id="@+id/profileChips01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pixelDividerTop01">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pixel_chip"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:text="Datos"
+                android:textAllCaps="true"
+                android:textColor="@color/pixel_shadow"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pixel_chip"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:text="Ciberseguridad"
+                android:textAllCaps="true"
+                android:textColor="@color/pixel_shadow"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/statsTitle01"
+            style="@style/TextAppearance.Pixel.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:paddingVertical="8dp"
+            android:text="@string/profile_elizabeth_stats_title"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileChips01" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/statsGrid01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="3"
+            android:layout_marginTop="12dp"
+            android:useDefaultMargins="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statsTitle01">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/pixel_badge_frame"
+                android:gravity="center"
+                android:minWidth="96dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                app:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="@string/profile_elizabeth_stat_security"
+                    android:src="@drawable/pixel_icon_security" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:text="@string/profile_elizabeth_stat_security"
+                    android:textColor="@color/pixel_glow"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/pixel_badge_frame"
+                android:gravity="center"
+                android:minWidth="96dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                app:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="@string/profile_elizabeth_stat_process"
+                    android:src="@drawable/pixel_icon_process" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:text="@string/profile_elizabeth_stat_process"
+                    android:textColor="@color/pixel_glow"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/pixel_badge_frame"
+                android:gravity="center"
+                android:minWidth="96dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                app:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="@string/profile_elizabeth_stat_learning"
+                    android:src="@drawable/pixel_icon_learning" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:text="@string/profile_elizabeth_stat_learning"
+                    android:textColor="@color/pixel_glow"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.gridlayout.widget.GridLayout>
+
+        <TextView
+            android:id="@+id/description01"
+            style="@style/TextAppearance.Pixel.Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/pixel_panel"
+            android:padding="24dp"
+            android:text="Soy Estudiante de Ingeniería en Sistemas Computacionales y Cibernética, con interés en análisis de datos, optimización de procesos y ciberseguridad. Estoy enfocada en aprender continuamente y aplicar otros conocimientos (como finanzas o administración) para resolver problemas de manera eficiente."
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statsGrid01" />
+
+        <Button
+            android:id="@+id/backHome01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/pixel_button_selector"
+            android:padding="16dp"
+            android:text="Regresar"
+            android:textAllCaps="true"
+            android:textColor="@color/pixel_glow"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description01" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

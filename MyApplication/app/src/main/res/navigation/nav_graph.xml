@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_mainMenuFragment_to_perfilFragment2"
             app:destination="@id/perfilFragment2" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_catsDataFragment"
+            app:destination="@id/catsDataFragment" />
 
     </fragment>
 
@@ -39,5 +42,10 @@
             app:destination="@id/mainMenuFragment" />
 
     </fragment>
+
+    <fragment
+        android:id="@+id/catsDataFragment"
+        android:name="com.example.myapplication.CatsDataFragment"
+        android:label="Gatos y datos perturbadores" />
 
 </navigation>

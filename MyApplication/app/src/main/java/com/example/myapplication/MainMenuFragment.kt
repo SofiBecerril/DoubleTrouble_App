@@ -38,12 +38,16 @@ class MainMenuFragment : Fragment() {
 
         val firstButton = view.findViewById<View>(R.id.firstButton)
         val secondButton = view.findViewById<View>(R.id.secondButton)
+        val catsButton = view.findViewById<View>(R.id.catsButton)
 
         firstButton.setOnClickListener {
             findNavController().navigate(R.id.action_mainMenuFragment_to_perfilFragment1)
         }
         secondButton.setOnClickListener {
             findNavController().navigate(R.id.action_mainMenuFragment_to_perfilFragment2)
+        }
+        catsButton.setOnClickListener {
+            findNavController().navigate(R.id.action_mainMenuFragment_to_catsDataFragment)
         }
 
         return view

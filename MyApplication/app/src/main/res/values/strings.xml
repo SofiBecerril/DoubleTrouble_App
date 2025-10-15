@@ -1,5 +1,23 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Double Trouble</string>
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+    <string name="menu_star_decoration">Estrella decorativa estilo pixel</string>
+    <string name="menu_logo_description">Emblema pixelado de Double Trouble</string>
+    <string name="menu_ground_decoration">Decoración de piso pixelado</string>
+    <string name="profile_chip_label">%1$s</string>
+    <string name="profile_elizabeth_avatar">Retrato pixel art de Elizabeth</string>
+    <string name="profile_sofia_avatar">Retrato pixel art de Sofía</string>
+    <string name="profile_stats_title">Mis power-ups favoritos</string>
+    <string name="profile_stat_music">Playlist LoFi</string>
+    <string name="profile_stat_data">Laboratorio de datos</string>
+    <string name="profile_stat_swim">Natación retro</string>
+    <string name="profile_elizabeth_stats_title">Mis rutas estratégicas</string>
+    <string name="profile_elizabeth_stat_security">Guardian del perímetro</string>
+    <string name="profile_elizabeth_stat_process">Optimización 8-bit</string>
+    <string name="profile_elizabeth_stat_learning">Aprendizaje continuo</string>
+    <string name="cats_screen_title">Gatos y datos perturbadores</string>
+    <string name="cats_fact_title">Dato perturbador</string>
+    <string name="cats_reload_button">Recargar aventura</string>
+    <string name="cats_image_content">Imagen pixelada de un gato aleatorio</string>
+    <string name="cats_error_message">Ups, no pudimos cargar el gato ni el dato. Intenta de nuevo.</string>
 </resources>

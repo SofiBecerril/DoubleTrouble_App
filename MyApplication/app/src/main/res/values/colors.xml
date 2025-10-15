@@ -2,4 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Pixel art inspired palette -->
+    <color name="pixel_midnight">#141126</color>
+    <color name="pixel_shadow">#080717</color>
+    <color name="pixel_navy">#242B4F</color>
+    <color name="pixel_cerulean">#2B6CB3</color>
+    <color name="pixel_sky">#3D8EDB</color>
+    <color name="pixel_lavender">#A38CFF</color>
+    <color name="pixel_sun">#FFC658</color>
+    <color name="pixel_salmon">#FF8374</color>
+    <color name="pixel_mint">#6FE5C1</color>
+    <color name="pixel_glow">#F5F6FF</color>
+    <color name="pixel_ground">#2C1B3F</color>
 </resources>
